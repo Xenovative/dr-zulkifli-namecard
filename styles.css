@@ -55,7 +55,6 @@ body {
   border-radius: 50%;
   overflow: hidden;
   border: 3px solid var(--gold-muted);
-  box-shadow: 0 0 32px rgba(240, 205, 114, 0.2);
   background: var(--card);
 }
 
@@ -65,7 +64,7 @@ body {
   height: 100%;
   object-fit: cover;
   object-position: center 12%;
-  transform: scale(1.12);
+  transform: scale(1.08);
 }
 
 .honorific {
@@ -169,7 +168,7 @@ body {
 }
 
 .info-list li::before {
-  content: "•";
+  content: "??;
   position: absolute;
   left: 0;
   color: var(--gold-light);
@@ -205,7 +204,13 @@ body {
   display: block;
   width: 100%;
   height: auto;
+  object-fit: cover;
   vertical-align: middle;
+}
+
+.gallery-item:first-child img {
+  object-position: center top;
+  aspect-ratio: 1043 / 662;
 }
 
 .contact-panel {
