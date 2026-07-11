@@ -9,14 +9,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260711d">
+  <link rel="stylesheet" href="styles.css?v=20260711e">
   <link rel="icon" href="assets/profile.png" type="image/png">
 </head>
 <body>
   <main class="card">
     <header class="hero">
       <div class="profile-wrap">
-        <img src="assets/profile.png" alt="Yang Berhormat Senator Dr. Zulkifli Hasan" class="profile-photo" width="280" height="280">
+        <img src="assets/profile.png?v=20260711e" alt="Yang Berhormat Senator Dr. Zulkifli Hasan" class="profile-photo" width="280" height="280">
       </div>
       <p class="honorific">Yang Berhormat Senator Dr.</p>
       <h1 class="name">Zulkifli Hasan</h1>
@@ -93,5 +93,16 @@
       </address>
     </section>
   </main>
+  <script>
+    // #region agent log
+    window.addEventListener('load', () => {
+      const img = document.querySelector('.profile-photo');
+      const wrap = document.querySelector('.profile-wrap');
+      if (!img || !wrap) return;
+      const cs = getComputedStyle(img);
+      fetch('http://127.0.0.1:7501/ingest/13cfea48-8ef8-4597-8481-d17014fbf4be',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'783f56'},body:JSON.stringify({sessionId:'783f56',location:'index.html:profile-check',message:'Profile frame runtime',data:{naturalW:img.naturalWidth,naturalH:img.naturalHeight,src:img.currentSrc,objectPosition:cs.objectPosition,transform:cs.transform,wrapW:wrap.offsetWidth,wrapH:wrap.offsetHeight},timestamp:Date.now(),runId:'profile-recenter',hypothesisId:'H2'})}).catch(()=>{});
+    });
+    // #endregion
+  </script>
 </body>
 </html>
