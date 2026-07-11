@@ -104,6 +104,7 @@ body {
   letter-spacing: 0.14em;
   text-decoration: none;
   text-align: center;
+  text-transform: uppercase;
   border: none;
   border-radius: 12px;
   cursor: pointer;
