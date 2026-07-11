@@ -55,9 +55,7 @@ body {
   border-radius: 50%;
   overflow: hidden;
   border: 3px solid var(--gold-muted);
-  box-shadow:
-    0 0 0 1px rgba(240, 205, 114, 0.15),
-    0 0 32px rgba(240, 205, 114, 0.2);
+  box-shadow: 0 0 32px rgba(240, 205, 114, 0.2);
   background: var(--card);
 }
 
@@ -66,7 +64,8 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 12%;
+  transform: scale(1.12);
 }
 
 .honorific {
